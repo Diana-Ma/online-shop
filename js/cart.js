@@ -86,6 +86,11 @@ class Cart {
   }
   cartLength() {
     return Object.keys(this.cart).length;
+    let count = o;
+    for (const key in this.cart){
+        count += this.cart[key];
+    }
+    return count;
   }
   order(ev) {
     if (this.cartLength() === 0) {
